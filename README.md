@@ -68,6 +68,28 @@ open settings.py and change this:
 csv_file_name: str = "Work-ua-parser.csv"  # Name of your file(word ending: .csv)
 ```
 
+### <li>keywords in the title</li>
+
+open settings.py and change this:
+
+```bash
+key_words: list[str] = [
+    "python",
+    "django",
+]
+```
+
+### <li>do not add vacancies that include these words</li>
+
+open settings.py and change this:
+
+```bash
+ban_words: list[str] = [
+    "middle",
+    "senior",
+]
+```
+
 ---
 
 ### Run the script using the following command
