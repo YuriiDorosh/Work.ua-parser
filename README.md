@@ -1,6 +1,6 @@
 # Work.ua Parser
 
-This is a Python script for parsing job vacancies from the Work.ua website. It retrieves job vacancies related to Python and Django development, excluding positions with "middle" or "senior" in the title. Duplicate vacancies are removed before saving the results to a CSV file.
+This is a Python script for parsing job vacancies from the Work.ua website. 
 
 ## Requirements
 
