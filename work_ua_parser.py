@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
+from settings import key_words, ban_words
 
 class WorkUaParser:
     """
@@ -48,11 +49,11 @@ class WorkUaParser:
 
                 if not any(
                     keyword.lower() in vacancy_title.lower()
-                    for keyword in ["middle", "senior"]
+                    for keyword in ban_words
                 ):
                     if any(
                         keyword.lower() in vacancy_title.lower()
-                        for keyword in ["python", "django"]
+                        for keyword in key_words
                     ):
                         vacancies_list.append(
                             {
