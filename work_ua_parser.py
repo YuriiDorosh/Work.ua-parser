@@ -4,6 +4,7 @@ import csv
 
 from settings import key_words, ban_words
 
+
 class WorkUaParser:
     """
     Class with logic for parsing Work.ua website to retrieve job vacancies.
@@ -48,8 +49,7 @@ class WorkUaParser:
                 vacancy_link = vacancy.find("a", href=True)["href"]
 
                 if not any(
-                    keyword.lower() in vacancy_title.lower()
-                    for keyword in ban_words
+                    keyword.lower() in vacancy_title.lower() for keyword in ban_words
                 ):
                     if any(
                         keyword.lower() in vacancy_title.lower()
